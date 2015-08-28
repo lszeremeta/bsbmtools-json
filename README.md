@@ -11,6 +11,8 @@ This is [BSBM Tools](http://sourceforge.net/projects/bsbmtools/) with added [RDF
 ./generate -fc -pc 10 -fn example -s json
 ```
 
+Generated RDF/JSON samples are available in the [bsbmtools-json-samples](https://github.com/lszeremeta/bsbmtools-json-samples) repository.
+
 You can see a list of all available options and additional examples in the [original documentation](http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/spec/BenchmarkRules/index.html#datagenerator).
 
 ## Author
