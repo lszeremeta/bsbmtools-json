@@ -1089,8 +1089,7 @@ public class Generator {
         String output = "Usage:\n\n" +
                 "Possible options are:\n" +
                 "\t-s <output format>\n" +
-                "\t\twhere <output format>: nt (N-Triples), trig (TriG), ttl (Turtle), sql (MySQL dump),\n" +
-                "\t\t\tvirt (Virtuoso SQL dump), monetdb (SQL), xml (XML dump)\n" +
+                "\t\twhere <output format>: nt (N-Triples), trig (TriG), ttl (Turtle), sql (MySQL dump), virt (Virtuoso SQL dump), monetdb (SQL), xml (XML dump), json (JSON)\n" +
                 "\t\tdefault: nt\n" +
                 "\t\tNote:\tBy chosing a named graph output format like TriG,\n\t\t\ta named graph model gets generated.\n" +
                 "\t-pc <product count>\n" +
