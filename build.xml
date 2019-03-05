@@ -110,10 +110,11 @@
   <!-- ========================================== -->
   <!-- ==== Build, compile, jar, javadoc -->
 
-  <target name="compile" depends="java-init,compile-main"  description="Compile project"/>
+  <target name="compile" depends="java-init,resolve,compile-main"  description="Compile project"/>
 
   <target name="compile-main">
     <mkdir dir="${build.classes.dir}" />
+    <mkdir dir="${lib.dir}" />
     <javac destdir="${build.classes.dir}"
            debug="${java.debug}"
            deprecation="${java.debuglevel}"
@@ -166,7 +167,7 @@
 
   <target name="clean-build-area">
     <delete quiet="true" dir="${build.dir}"/>
-    <mkdir  dir="${build.dir}/benchmark"/>
+    <delete quiet="true" dir="${lib.dir}"/>
   </target>
 
 </project>

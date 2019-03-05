@@ -9,13 +9,7 @@ This is [BSBM Tools](http://sourceforge.net/projects/bsbmtools/) with added [RDF
 
 The project is built using Apache Ant and project dependencies are handled by Apache Ivy. You need to install these tools in order to build the project.
 
-Run this first to resolve/pull dependencies:
-
-```
-apt -lib /usr/share/java resove
-```
-
-Then, build the project:
+Build the project:
 
 ```
 apt -lib /usr/share/java
