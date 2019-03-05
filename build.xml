@@ -94,6 +94,10 @@
     <property name="java.target"      value="1.6"/>
   </target>
 
+  <target name="resolve" description="ivy dependencies">
+    <ivy:retrieve/>
+  </target>
+
   <target name="set-classpath">
     <!-- This must be after IVY has done it's dependence stuff, hence as a task -->
     <path id="java.build.class.path">

@@ -5,6 +5,25 @@ This is [BSBM Tools](http://sourceforge.net/projects/bsbmtools/) with added [RDF
 > The Berlin SPARQL Benchmark (BSBM) defines a suite of benchmarks for comparing the performance of these systems across architectures. The benchmark is built around an e-commerce use case in which a set of products is offered by different vendors and consumers have posted reviews about products. The benchmark query mix illustrates the search and navigation pattern of a consumer looking for a product.
 > - http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/
 
+## Building
+
+The project is built using Apache Ant and project dependencies are handled by Apache Ivy. You need to install these tools in order to build the project.
+
+Run this first to resolve/pull dependencies:
+
+```
+apt -lib /usr/share/java resove
+```
+
+Then, build the project:
+
+```
+apt
+```
+
+The dependencies are configured using `ivy.xml`. Note that some old dependencies reside in a not very popular maven repository, configured in `ivysettings.xml`.
+
+
 ## Example usage
 
 ```
