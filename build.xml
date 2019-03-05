@@ -5,7 +5,7 @@
 
   <!-- ========================================== -->
   <!-- ==== Configuration -->
-  <property name="Name"             	value="BSBM"/>
+  <property name="Name"                 value="BSBM"/>
   <property name="name"                 value="bsbm"/>
 
   <property environment="env"/>
@@ -17,12 +17,12 @@
   <property name="version-status"       value=""/>
   <property name="version"
             value="${version-major}.${version-minor}.${version-revision}${version-status}"/>
-  
+
   <!-- javadoc -->
   <property name="copyright.text"
-	    value="Copyright &#169; Freie Universitat Berlin and Łukasz Szeremeta"/>
+            value="Copyright &#169; Freie Universitat Berlin and Łukasz Szeremeta"/>
   <property name="javadoc.packages"     value="benchmark.*"/>
-  
+
   <target name="main" depends="jar"/>
 
   <!-- Sources as a path -->
@@ -31,7 +31,7 @@
   <!-- Source code -->
   <path id="java.source.path.main">
     <pathelement path="${src.dir}"/>
-  </path>    
+  </path>
 
   <path id="java.source.path">
     <path refid="java.source.path.main"/>
@@ -45,7 +45,7 @@
   <!-- Library code -->
 
   <!-- Set version from components (if not already set) -->
-  <property    name="version"  
+  <property    name="version"
                value="${version-major}.${version-minor}.${version-revision}${version-status}"/>
 
   <!-- Artifacts -->
@@ -63,7 +63,7 @@
 
   <!-- ========================================== -->
   <!-- ==== Setup  -->
-  
+
   <path id="java.run.class.path">
     <!-- jar file may, or may not, be in the lib directory -->
     <fileset dir="${lib.dir}" includes="*.jar" excludes="${jarfile}"/>
@@ -76,13 +76,13 @@
   </tstamp>
 
   <!-- <echo message="Build: ${build.time.xsd}"/> -->
-  
+
   <filterset id="filters.build.metadata">
     <filter token="VERSION"           value="${version}" />
     <filter token="BUILD_TIME"        value="${build.time.txt}" />
     <filter token="BUILD_TIME_XSD"    value="${build.time.xsd}" />
   </filterset>
-  
+
   <target name="javac-flags">
     <!-- Target - so can have different javac flags (properties are set once) -->
     <property name="java.debug"       value="true"/>
@@ -93,13 +93,13 @@
     <property name="java.source"      value="1.6"/>
     <property name="java.target"      value="1.6"/>
   </target>
-        
+
   <target name="set-classpath">
-    <!-- This must be after IVY has done it's dependence stuff, hence as a task --> 
+    <!-- This must be after IVY has done it's dependence stuff, hence as a task -->
     <path id="java.build.class.path">
       <fileset dir="${lib.dir}" includes="*.jar" excludes="${jarfile}"/>
     </path>
-  </target>          
+  </target>
 
   <target name="java-init" depends="javac-flags,set-classpath"/>
 
@@ -107,7 +107,7 @@
   <!-- ==== Build, compile, jar, javadoc -->
 
   <target name="compile" depends="java-init,compile-main"  description="Compile project"/>
-  
+
   <target name="compile-main">
     <mkdir dir="${build.classes.dir}" />
     <javac destdir="${build.classes.dir}"
@@ -140,9 +140,9 @@
 
   <!-- Not depends="build.jar" because that will always be run even if the body is "unless"'ed out -->
 
-  <target name="jar" 
-	  description="Compile and build the jar"
-	  unless="jar.run">
+  <target name="jar"
+          description="Compile and build the jar"
+          unless="jar.run">
     <antcall target="build.jar"/>
     <property name="jar.run" value="done"/>
   </target>
