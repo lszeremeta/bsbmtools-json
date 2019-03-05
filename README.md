@@ -18,8 +18,10 @@ apt -lib /usr/share/java resove
 Then, build the project:
 
 ```
-apt
+apt -lib /usr/share/java
 ```
+
+(You don't need to specify `-lib` option if your `ivy` jars are in classpath already, or configured otherwise).
 
 The dependencies are configured using `ivy.xml`. Note that some old dependencies reside in a not very popular maven repository, configured in `ivysettings.xml`.
 
