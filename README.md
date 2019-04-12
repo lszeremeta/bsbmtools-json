@@ -12,10 +12,10 @@ The project is built using Apache Ant and project dependencies are handled by Ap
 Build the project:
 
 ```
-apt
+ant
 ```
 
-(Make sure that ivy is properly configured and accessible by ant).
+Make sure that ivy is properly configured and accessible by ant. For instance, you may want to set up a link to `ivy.jar` from `~/.ant/lib/`.
 
 The dependencies are configured using `ivy.xml`. Note that some old dependencies reside in a not very popular maven repository, configured in `ivysettings.xml`.
 
