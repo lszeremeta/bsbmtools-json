@@ -124,9 +124,9 @@
   <target name="copy-resources">
     <copy todir="${build.dir}" flatten="true">
       <resources>
-        <file file="${src.dir}/main/resources/scripts/generate"/>
-        <file file="${src.dir}/main/resources/scripts/qualification"/>
-        <file file="${src.dir}/main/resources/scripts/testdriver"/>
+        <file file="${src.dir}/main/resources/generate"/>
+        <file file="${src.dir}/main/resources/qualification"/>
+        <file file="${src.dir}/main/resources/testdriver"/>
       </resources>
     </copy>
     <chmod dir="${build.dir}" perm="+x" includes="*"/>
