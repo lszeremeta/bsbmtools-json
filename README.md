@@ -11,9 +11,7 @@ The project is built using Apache Ant and project dependencies are handled by Ap
 
 Build the project:
 
-```
-ant
-```
+    $ ant
 
 Make sure that ivy is properly configured and accessible by ant. For instance, you may want to set up a link to `ivy.jar` from `~/.ant/lib/`.
 
@@ -22,19 +20,24 @@ The dependencies are configured using `ivy.xml`. Note that some old dependencies
 
 ## Example usage
 
-```
-./generate -fc -pc 10 -fn example -s json
-```
+    $ generate -fc -pc 10 -fn example -s json
 
 Generated RDF/JSON samples are available in the [bsbmtools-json-samples](https://github.com/lszeremeta/bsbmtools-json-samples) repository.
 
 You can see a list of all available options by running:
 
-```
-./generate -help
-```
+    $ generate -help
+
 
 Additional examples are also available in the [original documentation](http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/spec/BenchmarkRules/index.html#datagenerator).
+
+
+### HTTP Basic Authentication
+
+If the SPARQL endpoint requires authentication, you can provide credentials in the URL:
+
+    $ testdriver http://admin:admin@localhost/sparql
+
 
 ## Author
 
