@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SCRIPTPATH=`dirname $(realpath $0)`
+LIBPATH=`realpath $SCRIPTPATH/../lib`
+CP="$LIBPATH/classes"
+
+if [ $# == 0 ]; then
+    echo "For generator options type 'testdriver -help'"
+fi
+
+exec java -cp "$CP" -Xmx256M benchmark.testdriver.TestDriver "$@"
