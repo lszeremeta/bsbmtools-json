@@ -1,1 +1,1 @@
-querymix=queries/sql/explore/sqlQueries
+querymix=data/queries/sql/explore/sqlQueries

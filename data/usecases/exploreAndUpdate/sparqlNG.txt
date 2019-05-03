@@ -1,2 +1,2 @@
-querymix=queries/updateNG
-querymix=queries/explore
+querymix=data/queries/updateNG
+querymix=data/queries/explore

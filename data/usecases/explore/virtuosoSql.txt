@@ -1,1 +1,1 @@
-querymix=queries/sql/explore/virtSQLqueries
+querymix=data/queries/sql/explore/virtSQLqueries

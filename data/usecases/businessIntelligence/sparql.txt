@@ -1,1 +1,1 @@
-querymix=queries/bi
+querymix=data/queries/bi

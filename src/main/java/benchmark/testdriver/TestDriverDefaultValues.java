@@ -4,7 +4,7 @@ import java.io.File;
 
 public class TestDriverDefaultValues {
 	public static int warmups = 50;//how many Query mixes are run for warm up
-	public static File usecaseFile = new File("usecases/explore/sparql.txt");
+	public static File usecaseFile = new File("data/usecases/explore/sparql.txt");
 	public static int nrRuns = 500;
 	public static long seed = 808080L;
 	public static String defaultGraph = null;

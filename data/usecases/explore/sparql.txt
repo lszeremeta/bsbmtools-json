@@ -1,1 +1,1 @@
-querymix=queries/explore
+querymix=data/queries/explore

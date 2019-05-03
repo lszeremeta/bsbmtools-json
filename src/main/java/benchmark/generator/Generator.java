@@ -1102,13 +1102,13 @@ public class Generator {
                 "\t-fc\tSwitch on forward chaining which is by default off\n" +
                 "\t-d1 <dictionary file 1>\n" +
                 "\t\tInput dictionary file #1\n" +
-                "\t\tdefault: titlewords.txt\n" +
+                "\t\tdefault: data/titlewords.txt\n" +
                 "\t-d2 <dictionary file 1>\n" +
                 "\t\tInput dictionary file #2\n" +
-                "\t\tdefault: titlewords.txt\n" +
+                "\t\tdefault: data/titlewords.txt\n" +
                 "\t-d3 <dictionary file 3>\n" +
                 "\t\tInput dictionary file #3\n" +
-                "\t\tdefault: givennames.txt\n" +
+                "\t\tdefault: data/givennames.txt\n" +
                 "\t-dir <output directory>\n" +
                 "\t\tThe output directory for the Test Driver data\n" +
                 "\t\tdefault: td_data\n" +
