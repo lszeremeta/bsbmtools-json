@@ -8,4 +8,12 @@ if [ $# == 0 ]; then
     echo "For generator options type 'qualification -help'"
 fi
 
+SEP=':'
+if [ "$(uname)" = "Cygwin" ]; then SEP=';'; fi
+
+for jar in lib/*.jar; do
+    if [ ! -e "$jar" ]; then continue; fi
+    CP="$CP$SEP$jar"
+done
+
 exec java -cp "$CP" -Xmx256M benchmark.qualification.Qualification "$@"
