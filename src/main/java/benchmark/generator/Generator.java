@@ -48,9 +48,9 @@ public class Generator {
     private static int nrOfMinProductNrForUpdate = Integer.MAX_VALUE;
     private static Serializer updateDatasetSerializer = null;
     private static List<List<BSBMResource>> updateResourceData = null;
-    private static String dictionary1File = "titlewords.txt";
-    private static String dictionary2File = "titlewords.txt";
-    private static String dictionary3File = "givennames.txt";
+    private static String dictionary1File = "data/titlewords.txt";
+    private static String dictionary2File = "data/titlewords.txt";
+    private static String dictionary3File = "data/givennames.txt";
 
     //Ratios of different Resources
     static final int productsVendorsRatio = 100;
