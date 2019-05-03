@@ -14,8 +14,4 @@ done
 
 CMD="java -cp $CP -Xmx256M benchmark.generator.Generator"
 
-if [ $# == 0 ]; then
-    exec $CMD -help
-else
-    exec $CMD "$@"
-fi
+exec $CMD "$@"
