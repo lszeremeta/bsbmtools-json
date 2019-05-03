@@ -4,6 +4,7 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.*;
 import java.io.*;
+import org.apache.commons.codec.binary.Base64;
 
 public class NetQuery {
 	HttpURLConnection conn;
@@ -55,6 +56,14 @@ public class NetQuery {
 		conn.setDoOutput(true);
 		conn.setUseCaches(false);
 		conn.setReadTimeout(timeout);
+
+                String authString = conn.getURL().getUserInfo();
+                if (authString != null) {
+                    byte[] authEncBytes = Base64.encodeBase64(authString.getBytes());
+                    String authStringEnc = new String(authEncBytes);
+                    conn.setRequestProperty("Authorization", "Basic " + authStringEnc);
+                }
+
 		if(queryType==Query.DESCRIBE_TYPE || queryType==Query.CONSTRUCT_TYPE)
 			conn.setRequestProperty("Accept", "application/rdf+xml");
 		else
