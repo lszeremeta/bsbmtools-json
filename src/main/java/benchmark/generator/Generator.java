@@ -48,6 +48,9 @@ public class Generator {
     private static int nrOfMinProductNrForUpdate = Integer.MAX_VALUE;
     private static Serializer updateDatasetSerializer = null;
     private static List<List<BSBMResource>> updateResourceData = null;
+    private static String dictionary1File = "data/titlewords.txt";
+    private static String dictionary2File = "data/titlewords.txt";
+    private static String dictionary3File = "data/givennames.txt";
 
     //Ratios of different Resources
     static final int productsVendorsRatio = 100;
@@ -58,10 +61,6 @@ public class Generator {
     static final int avgProductsPerProducer = 50;
     static final int avgOffersPerProduct = 20;
     static final int avgOffersPerVendor = productsVendorsRatio * avgOffersPerProduct;
-
-    static final String dictionary1File = "titlewords.txt";
-    static final String dictionary2File = "titlewords.txt";
-    static final String dictionary3File = "givennames.txt";
 
     static final Random seedGenerator = new Random(53223436L);
 
@@ -1051,6 +1050,12 @@ public class Generator {
                     productCount = Integer.parseInt(args[i++ + 1]);
                 } else if (args[i].equals("-fc")) {
                     forwardChaining = true;
+                } else if (args[i].equals("-d1")) {
+                    dictionary1File = args[i++ + 1];
+                } else if (args[i].equals("-d2")) {
+                    dictionary2File = args[i++ + 1];
+                } else if (args[i].equals("-d3")) {
+                    dictionary3File = args[i++ + 1];
                 } else if (args[i].equals("-dir")) {
                     outputDirectory = args[i++ + 1];
                 } else if (args[i].equals("-fn")) {
@@ -1089,13 +1094,21 @@ public class Generator {
         String output = "Usage:\n\n" +
                 "Possible options are:\n" +
                 "\t-s <output format>\n" +
-                "\t\twhere <output format>: nt (N-Triples), trig (TriG), ttl (Turtle), sql (MySQL dump),\n" +
-                "\t\t\tvirt (Virtuoso SQL dump), monetdb (SQL), xml (XML dump)\n" +
+                "\t\twhere <output format>: nt (N-Triples), trig (TriG), ttl (Turtle), sql (MySQL dump), virt (Virtuoso SQL dump), monetdb (SQL), xml (XML dump), json (JSON)\n" +
                 "\t\tdefault: nt\n" +
                 "\t\tNote:\tBy chosing a named graph output format like TriG,\n\t\t\ta named graph model gets generated.\n" +
                 "\t-pc <product count>\n" +
                 "\t\tdefault: 100\n" +
                 "\t-fc\tSwitch on forward chaining which is by default off\n" +
+                "\t-d1 <dictionary file 1>\n" +
+                "\t\tInput dictionary file #1\n" +
+                "\t\tdefault: data/titlewords.txt\n" +
+                "\t-d2 <dictionary file 1>\n" +
+                "\t\tInput dictionary file #2\n" +
+                "\t\tdefault: data/titlewords.txt\n" +
+                "\t-d3 <dictionary file 3>\n" +
+                "\t\tInput dictionary file #3\n" +
+                "\t\tdefault: data/givennames.txt\n" +
                 "\t-dir <output directory>\n" +
                 "\t\tThe output directory for the Test Driver data\n" +
                 "\t\tdefault: td_data\n" +

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+SCRIPTPATH=`dirname $(realpath $0)`
+LIBPATH=`realpath $SCRIPTPATH/../lib`
+CP="$LIBPATH/classes"
+
+SEP=':'
+if [ "$(uname)" = "Cygwin" ]; then SEP=';'; fi
+
+for jar in lib/*.jar; do
+    if [ ! -e "$jar" ]; then continue; fi
+    CP="$CP$SEP$jar"
+done
+
+CMD="java -cp $CP -Xmx256M benchmark.testdriver.TestDriver"
+
+if [ $# == 0 ]; then
+    exec $CMD -help
+else
+    exec $CMD "$@"
+fi

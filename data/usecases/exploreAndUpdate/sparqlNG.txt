@@ -1,0 +1,2 @@
+querymix=data/queries/updateNG
+querymix=data/queries/explore
