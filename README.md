@@ -54,9 +54,8 @@ If the SPARQL endpoint requires authentication, you can provide credentials in t
 
     $ bin/testdriver http://admin:admin@localhost/sparql
 
+## Contribution
+Would you like to improve this project? Great! We are waiting for your help and suggestions. If you are new in open source contributions, read [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/).
 
-## Author
-
-(C) [Łukasz Szeremeta](https://github.com/lszeremeta) 2015
-
-based on Christian Bizer and Andreas Schultz works
+## License
+Distributed under [Apache License 2.0](https://github.com/lszeremeta/bsbmtools-json/blob/master/LICENSE.txt).
